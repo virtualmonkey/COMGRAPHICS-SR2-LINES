@@ -66,7 +66,7 @@ class Render(object):
         if(self.glVertextInViewport(pixelX,pixelY) == True):
             self.pixels[pixelY][pixelX] = self.curr_color
     
-    def glVertex_coord(self, x, y):
+    def glPoint(self, x, y):
         self.pixels[y][x] = self.curr_color
     
     def glColor(self, r,g,b):
@@ -104,7 +104,7 @@ class Render(object):
         y = y0
 
         for x in range(x0, x1+1):
-            self.glVertex_coord(y, x) if steep else self.glVertex_coord(x, y)
+            self.glPoint(y, x) if steep else self.glPoint(x, y)
             
             offset += 2*dy
 
